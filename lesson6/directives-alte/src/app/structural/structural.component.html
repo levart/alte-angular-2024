@@ -1,0 +1,56 @@
+<div>
+  <button (click)="changeView()">Change View</button>
+</div>
+
+<!--@if (display){-->
+<!--  <div>-->
+<!--    I am Here-->
+<!--  </div>-->
+<!--}-->
+<div *ngIf="display">
+  I am Here
+</div>
+
+
+<div *ngFor="let item of [1,2,3,3,3,5]; let i = index; let first = first; let last = last">
+  number is {{item}}; index: {{i}}, is First: {{first}}, is last {{last}}
+</div>
+<hr>
+<div *ngFor="let user of users" >
+  <div>
+    {{user.name}}
+  </div>
+  <div [ngSwitch]="user.type">
+    <div *ngSwitchCase="userType.Admin">
+      You are Admin
+    </div>
+    <div *ngSwitchCase="userType.User">
+      You are User
+    </div>
+    <div *ngSwitchCase="userType.Guest">
+      You are Guest
+    </div>
+    <div *ngSwitchDefault>
+      You don't have Type
+    </div>
+  </div>
+
+  @switch (user.type){
+    @case (userType.Admin){
+      You are Admin
+    }
+    @case (userType.User){
+      You are User
+    }
+    @case (userType.Guest){
+      You are Guest
+    }
+    @default {
+      You don't have Type
+    }
+  }
+</div>
+
+
+
+

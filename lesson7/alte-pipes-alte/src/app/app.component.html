@@ -1,0 +1,32 @@
+
+
+<!--<div>{{today | date:'dd MMMM yyyy HH:mm':'+4':'ka'}}</div>-->
+<!--<div>{{today2}}</div>-->
+
+<!--<div>{{'Alte University' | uppercase}}</div>-->
+<!--<div>{{'Alte University' | lowercase}}</div>-->
+<!--<div>{{'alte university' | titlecase}}</div>-->
+
+<!--<div>{{12342342.3 | number:'1.3-3':'en'}}</div>-->
+<!--<div>{{12342342.3 | percent:'1.3-3':'en'}}</div>-->
+<!--<div>{{125 | currency:'GEL':'symbol-narrow':'1.3-3':'en'}}</div>-->
+
+
+<!--<pre>-->
+<!--  {{user | json}}-->
+<!--</pre>-->
+
+
+<!--@for (user of users; track user){-->
+<!--  -->
+<!--}-->
+
+<input [(ngModel)]="search">
+
+<div *ngFor="let user of users | filter:search">
+  <div>{{user.name}}</div>
+  <div>{{user.age}}</div>
+  <div>{{user.gender | gender}}</div>
+  <div>{{user.status | status}}</div>
+  <hr>
+</div>

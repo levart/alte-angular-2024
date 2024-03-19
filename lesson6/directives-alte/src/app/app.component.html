@@ -1,0 +1,58 @@
+<!--<app-structural/>-->
+<!--<app-atribute/>-->
+
+<h1>I am here</h1>
+<!--<ng-template #myTemplate>-->
+<!--  <div>-->
+<!--    <h1>ng-template</h1>-->
+<!--    <div>-->
+<!--      <p>ng-template é uma diretiva que não é renderizada no DOM</p>-->
+<!--      <p>ng-template é uma diretiva que não é renderizada no DOM</p>-->
+<!--      <p>ng-template é uma diretiva que não é renderizada no DOM</p>-->
+<!--      <p>ng-template é uma diretiva que não é renderizada no DOM</p>-->
+<!--      <p>ng-template é uma diretiva que não é renderizada no DOM</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</ng-template>-->
+
+<!--<div *ngTemplateOutlet="myTemplate"></div>-->
+
+<!--@if (true){-->
+<!--  <h1>ng-container</h1>-->
+<!--  <div>-->
+<!--    <p>ng-container é uma diretiva que não é renderizada no DOM</p>-->
+<!--  </div>-->
+<!--} @else {-->
+<!--  <h1>I am else</h1>-->
+<!--}-->
+
+<!--<div *ngIf="false; else elseTMPL">-->
+<!--  <h1>ng-container</h1>-->
+<!--  <div>-->
+<!--    <p>ng-container é uma diretiva que não é renderizada no DOM</p>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<ng-template #elseTMPL>-->
+<!--  <h1>I am else</h1>-->
+<!--</ng-template>-->
+
+<!--<ng-template [ngIf]="true" [ngIfElse]="elseTMPL" >-->
+<!--  <div>-->
+<!--    <h1>ng-container</h1>-->
+<!--    <div>-->
+<!--      <p>ng-container é uma diretiva que não é renderizada no DOM</p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</ng-template>-->
+
+<div *appMyIf="false; else elseTMPL" >
+  <h1>ng-container</h1>
+  <div>
+    <p>ng-container é uma diretiva que não é renderizada no DOM</p>
+  </div>
+</div>
+
+<ng-template #elseTMPL>
+  <h1>I am else</h1>
+</ng-template>

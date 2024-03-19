@@ -1,0 +1,17 @@
+
+<h1>Parent Component</h1>
+
+<!--<app-child [login]="isLoogedIn" (logout)="logout($event)"/>-->
+
+
+<!--<button (click)="helloHandle()">Hello</button>-->
+
+<!--<div *ngIf="childCompRef">{{childCompRef.name}}</div>-->
+
+<button (click)="createChild()">Child toggle</button>
+
+@if (childIsVisible){
+  <app-child [login]="isLoogedIn" (logout)="logout($event)"/>
+}
+
+<!--<app-child *ngIf="childIsVisible" [login]="isLoogedIn" (logout)="logout($event)"/>-->

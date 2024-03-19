@@ -1,0 +1,22 @@
+<h3>Child Component</h3>
+
+<!--<div *ngIf="!isLoogedIn">-->
+<!--  Please Login to see the content-->
+<!--</div>-->
+<!--<div *ngIf="isLoogedIn">-->
+<!--  Welcome to the content-->
+<!--</div>-->
+
+@if(!login) {
+  <div>
+    Please Login to see the content
+  </div>
+} @else {
+  <div>
+    Welcome to the content
+  </div>
+}
+
+<button (click)="logoutHandle()">Logout</button>
+
+

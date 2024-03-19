@@ -1,0 +1,61 @@
+
+<div [formGroup]="form">
+  <div>
+    <label for="name">First Name</label>
+    <input type="text" id="name" formControlName="firstName">
+  </div>
+
+  <div>
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" formControlName="lastName">
+  </div>
+</div>
+
+<div>
+  text
+</div>
+
+<div [formGroup]="form">
+  <div>
+    <label for="role">Role</label>
+    <select id="role" formControlName="role">
+      <option value="admin">Admin</option>
+      <option value="user">User</option>
+    </select>
+  </div>
+
+  <div formGroupName="address">
+    <div>
+      <label for="city">City</label>
+      <input type="text" id="city" formControlName="city">
+    </div>
+    <div>
+      <label for="street">Street</label>
+      <input type="text" id="street" formControlName="street">
+    </div>
+    <div>
+      <label for="zip">Street</label>
+      <input type="text" id="zip" formControlName="zip">
+    </div>
+  </div>
+
+  <hr>
+
+<button (click)="addSkill()">Add Skill</button>
+  <div *ngFor="let control of skills.controls; let i = index" formArrayName="skills">
+<!--    @for(control of skills.controls; track i; let i = $index){-->
+      <div [formGroupName]="i">
+        <label for="skill">Skill</label>
+        <input type="text" id="skill" formControlName="skill">
+        <button (click)="removeSkill(i)">Remove</button>
+      </div>
+<!--    }-->
+  </div>
+</div>
+
+<button (click)="submit()">Submit</button>
+
+
+<pre>
+  {{ form.value | json}}
+</pre>

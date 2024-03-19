@@ -1,0 +1,27 @@
+<!--<div [ngStyle]="{-->
+<!--  backgroundColor: hasError ? 'red' : 'green',-->
+<!--  fontSize: '20px'-->
+<!--}">-->
+<!--  Hello Angular-->
+<!--</div>-->
+
+<!--<div class="success" [ngClass]="{-->
+<!--  'error': hasError-->
+<!--}">-->
+<!--  Hello Angular-->
+<!--</div>-->
+
+
+<div appHighlighter="yellow">
+  Hello Angular
+</div>
+
+<div appHighlighter="red" color="white">
+  Hello World
+</div>
+
+<div [appMyClass]="{
+  'error': hasError
+}">
+  Hello Angular My Class
+</div>

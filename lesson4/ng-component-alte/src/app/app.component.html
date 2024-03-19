@@ -1,0 +1,41 @@
+<!-- interpolation {{}} -->
+<div>
+  {{title}}
+</div>
+<hr>
+<!-- property binding [] -->
+<img (mouseenter)="onClick($event)" [src]="image" [alt]="title" width="300px">
+
+<hr>
+<!-- event binding () -->
+<button (click)="onClick($event)" >Click me</button>
+<div>{{counter}}</div>
+
+<hr>
+
+<!-- two way binding [()] -->
+<input type="text" [ngModel]="formValue" (ngModelChange)="onChnageValue($event)">
+
+<div>
+  {{formValue}}
+</div>
+
+
+<hr>
+<input #telNumber type="text" />
+
+<button (click)="onCall(telNumber.value)">Call</button>
+
+<hr>
+<input #fileInput type="file" style="display: none" (change)="onFileChoose($event)"/>
+
+<button (click)="fileInput.click()">Upload</button>
+
+<hr>
+<input #fileInput2 type="file" style="display: none" (change)="onFileChoose($event)"/>
+
+<button (click)="onFileUploadCliked()">Upload 2</button>
+
+<div #textTag>
+  Somevery big txt
+</div>
