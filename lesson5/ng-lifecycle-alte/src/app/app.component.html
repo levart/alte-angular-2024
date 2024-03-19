@@ -1,0 +1,26 @@
+<div #afterEl>
+  After View ini text
+</div>
+
+<div>
+  <button (click)="addAuthorCount()">Add count</button>
+  <button (click)="decreaseAuthorCount()">Decrease count</button>
+
+  <button (click)="setCount(2)">Add 2</button>
+  <button (click)="setCount(3)">Add 3</button>
+
+  <button (click)="visible = !visible">Show/Hide</button>
+</div>
+
+@if (visible){
+  <app-authors
+    [authorCount]="authorCount"
+    [authors]="authors"
+    [author]="author"
+  >
+    <h1>Authors</h1>
+    <p>Here are the authors</p>
+    <p>Count: {{ authorCount }}</p>
+    <p>Author: {{ author }}</p>
+  </app-authors>
+}

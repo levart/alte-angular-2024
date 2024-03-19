@@ -1,0 +1,24 @@
+<app-posts>
+
+  <div>
+    <button (click)="addPost()">add post</button>
+  </div>
+  <div class="post-content">
+    @for (post of posts; track post) {
+      <app-post-item
+        [title]="post.title"
+        [body]="post.body"
+        (delete)="itemDelete(post)"
+      ></app-post-item>
+    }
+  </div>
+
+
+<!--  <div *ngFor="let post of posts; trackBy: trackBy">-->
+<!--    <app-post-item-->
+<!--      [title]="post.title"-->
+<!--      [body]="post.body"-->
+<!--    ></app-post-item>-->
+<!--  </div>-->
+
+</app-posts>
