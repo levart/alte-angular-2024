@@ -1,0 +1,17 @@
+<table>
+  @for(user of users; track user){
+    <tr>
+      <td>{{user.name}}</td>
+      <td>
+        <a [routerLink]="['/users',user.id]">View Details</a>
+        <button type="button" (click)="changeRoute(user.id)">View Details button</button>
+        <div [routerLink]="'/users/'+user.id">View Details div</div>
+      </td>
+    </tr>
+  }
+</table>
+
+<hr>
+<div>
+  UserId : {{userId}}
+</div>

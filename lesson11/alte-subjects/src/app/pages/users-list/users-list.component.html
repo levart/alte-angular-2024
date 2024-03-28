@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="header">
+    <h1>Users</h1>
+    <button routerLink="/create">
+      Add user
+    </button>
+    <button (click)="createError()">
+      Create error
+    </button>
+  </div>
+  <table>
+    <tr>
+      <td>id</td>
+      <td>name</td>
+      <td>email</td>
+      <td></td>
+    </tr>
+    @for(user of (userService.users$ | async); track user;let i = $index){
+      <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          <button [routerLink]="['/create',user.id]">Edit</button>
+          <button (click)="delete(user.id)">Delete</button>
+        </td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="3">
+          Users is empty
+        </td>
+      </tr>
+    }
+
+  </table>
+</div>
+

@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+.container {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  button {
+    width: 100px;
+    background-color: blue;
+    color: white;
+    border: none;
+  }
+}
+
+.form-field {
+  display: block;
+  margin: 10px 0;
+  max-width: 350px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+
+
+}
+
+table {
+  width: 100%;
+
+  tr {
+    border: 1ps solid #ccc;
+  }
+
+  td{
+    width: 300px
+  }
+}

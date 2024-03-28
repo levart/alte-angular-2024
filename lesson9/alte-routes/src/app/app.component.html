@@ -1,0 +1,15 @@
+<div>
+  <ul>
+    <li><a routerLink="/">Main</a></li>
+    <li><a routerLink="/users">Users</a></li>
+  </ul>
+</div>
+
+<button (click)="login()">Login</button>
+<button (click)="logout()">Logout</button>
+
+<div>
+  User is Logged: {{isLoggedIn}}
+</div>
+
+<router-outlet />

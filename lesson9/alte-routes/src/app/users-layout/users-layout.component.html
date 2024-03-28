@@ -1,0 +1,16 @@
+<div>
+    <h1>Users</h1>
+    <p>Welcome to the home page</p>
+    <p>Here you can see all the users</p>
+<!--  <a href="/users/list?page=1&pageSize=10">tesf</a>-->
+<!--  /users/list?page=1&pageSize=10#orders-->
+    <button (click)="pagination(1)">Page 1</button>
+  <button (click)="pagination(2)">Page 2</button>
+  <button (click)="pagination(3)">Page 2</button>
+<!--  <button [routerLink]="['/users','list']" [queryParams]="{-->
+<!--        page: 3,-->
+<!--        pageSize: 10-->
+<!--    }" fragment="orders3">Page 3</button>-->
+    <router-outlet/>
+</div>
+users/list?page=3&page
