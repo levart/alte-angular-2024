@@ -1,0 +1,13 @@
+@if (user$ | async; as user) {
+  <h1>Edit user {{ user?.name }}</h1>
+} @else {
+  <h1>Create user</h1>
+}
+
+<form [formGroup]="form">
+  <input formControlName="name" placeholder="name" />
+  <input formControlName="email" placeholder="email"/>
+
+  <button (click)="submit()">Submit</button>
+</form>
+
